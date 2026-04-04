@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirSense Pro | Videolar</title>
+  <meta name="description" content="AirSense Pro özellik videoları ve kaydırmalı ürün tanıtım galerisi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
+      <button class="menu-toggle" type="button" id="menuToggle" aria-label="Menüyü aç">Menu</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Anasayfa</a>
+        <a href="urunler.html">Urunler</a>
+        <a href="platform.html">Platform</a>
+        <a href="videolar.html" class="active">Videolar</a>
+        <a href="iletisim.html">Iletisim</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Dil secimi">
+          <a href="videolar.html" class="active">TR</a>
+          <a href="videolar-en.html">EN</a>
+        </div>
+        <a class="btn btn-small" href="iletisim.html">Demo Talebi</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero reveal">
+      <p class="eyebrow">Video Merkezi</p>
+      <h1>Kaydirarak kesfedin: urun videolari ve canli demo kayitlari</h1>
+      <p class="lead">MQTT veri alimi, threshold/ML alarm tetikleme, email bildirim ve dashboard akislarini senaryo bazli izleyin.</p>
+    </section>
+
+    <section class="video-section reveal">
+      <div class="video-wrap">
+        <button class="slider-btn" id="prevBtn" aria-label="Onceki videolar">&#10094;</button>
+        <div class="video-track" id="videoTrack">
+          <article class="video-card">
+            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+            </video>
+            <h3>Gercek Zamanli Dashboard</h3>
+            <p>WebSocket ile canli sensor degerleri ve role dayali alarm ekranlarinin kullanim senaryosu.</p>
+          </article>
+          <article class="video-card">
+            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1581093588401-16ecf5a74d66?auto=format&fit=crop&w=1200&q=80">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/bee.mp4" type="video/mp4" />
+            </video>
+            <h3>Anomali Tespit Akisi</h3>
+            <p>Isolation Forest tabanli ML motorunun normal disi paternleri nasil yakaladigi.</p>
+          </article>
+          <article class="video-card">
+            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1581090700227-1e8e5b8d0b1b?auto=format&fit=crop&w=1200&q=80">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4" />
+            </video>
+            <h3>Mobil Alarm Yonetimi</h3>
+            <p>Flutter mobil uygulamada FCM ile alarmi alma, okuma ve takip sureci.</p>
+          </article>
+          <article class="video-card">
+            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1200&q=80">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+            </video>
+            <h3>Dijital Ikiz Analizi</h3>
+            <p>Three.js tabanli dijital ikizde risk bolgeleri ve simulasyon analizlerinin izlenmesi.</p>
+          </article>
+        </div>
+        <button class="slider-btn" id="nextBtn" aria-label="Sonraki videolar">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="strip reveal">
+      <p>Bir sonraki adim: pilot kurulum, SMTP email ayari ve PDF export rapor akisinin devreye alinmasi.</p>
+      <a class="btn btn-ghost" href="iletisim.html">Iletisime Gec</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>AirSense Pro - Video Merkezi</p>
+      <div>
+        <a href="urunler.html">Urunler</a>
+        <a href="platform.html">Platform</a>
+        <a href="iletisim.html">Iletisim</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

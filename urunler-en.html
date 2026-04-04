@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirSense Pro | Products</title>
+  <meta name="description" content="AirSense Pro product portfolio: sensor sets, field devices, and enterprise-grade packages." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index-en.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
+      <button class="menu-toggle" type="button" id="menuToggle" aria-label="Open menu">Menu</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index-en.html">Home</a>
+        <a href="urunler-en.html" class="active">Products</a>
+        <a href="platform-en.html">Platform</a>
+        <a href="videolar-en.html">Videos</a>
+        <a href="iletisim-en.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language switch">
+          <a href="urunler.html">TR</a>
+          <a href="urunler-en.html" class="active">EN</a>
+        </div>
+        <a class="btn btn-small" href="iletisim-en.html">Request Demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero reveal">
+      <p class="eyebrow">Product Portfolio</p>
+      <h1>Packages shaped around real field conditions</h1>
+      <p class="lead">Packages are mapped to the real backend sensor catalog (MQ-9/MQ-4/MQ-7/MQ-3/MQ-135/SCD40/DHT11/BH1750) and alert workflows.</p>
+    </section>
+
+    <section class="cards-grid reveal">
+      <article class="pro-card">
+        <h3>Starter Kit</h3>
+        <p>MQ gas bundle with core dashboard, threshold alerting, and email notifications.</p>
+        <ul>
+          <li>MQ4, MQ7, MQ135 + DHT11 starter set</li>
+          <li>Real-time panel (React + WebSocket)</li>
+          <li>Threshold-based alert emails (SMTP)</li>
+        </ul>
+      </article>
+      <article class="pro-card">
+        <h3>Production Kit</h3>
+        <p>For mid-size facilities with multi-device ingestion and ML anomaly scoring.</p>
+        <ul>
+          <li>Multi-device MQTT ingestion</li>
+          <li>Isolation Forest anomaly checks</li>
+          <li>FCM mobile notifications</li>
+        </ul>
+      </article>
+      <article class="pro-card">
+        <h3>Enterprise Suite</h3>
+        <p>Multi-site operations with digital twin simulations, RBAC, and PDF reporting.</p>
+        <ul>
+          <li>Role-based access and audit trail</li>
+          <li>Digital Twin (FastAPI + React + Three.js)</li>
+          <li>Alert/anomaly PDF export</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="strip reveal">
+      <p>Stack in production scope: FastAPI, MongoDB, Redis, MQTT, React 19, Flutter, Isolation Forest, and Three.js.</p>
+      <a class="btn btn-ghost" href="platform-en.html">Go to Platform</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>AirSense Pro - Products</p>
+      <div>
+        <a href="platform-en.html">Platform</a>
+        <a href="videolar-en.html">Videos</a>
+        <a href="iletisim-en.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

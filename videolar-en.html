@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirSense Pro | Videos</title>
+  <meta name="description" content="AirSense Pro feature videos and a horizontal, scrollable product showcase." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index-en.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
+      <button class="menu-toggle" type="button" id="menuToggle" aria-label="Open menu">Menu</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index-en.html">Home</a>
+        <a href="urunler-en.html">Products</a>
+        <a href="platform-en.html">Platform</a>
+        <a href="videolar-en.html" class="active">Videos</a>
+        <a href="iletisim-en.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language switch">
+          <a href="videolar.html">TR</a>
+          <a href="videolar-en.html" class="active">EN</a>
+        </div>
+        <a class="btn btn-small" href="iletisim-en.html">Request Demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero reveal">
+      <p class="eyebrow">Video Hub</p>
+      <h1>Scroll and explore: product walkthroughs and live demos</h1>
+      <p class="lead">Review MQTT ingestion, threshold/ML alert triggering, email notifications, and dashboard response flows.</p>
+    </section>
+
+    <section class="video-section reveal">
+      <div class="video-wrap">
+        <button class="slider-btn" id="prevBtn" aria-label="Previous videos">&#10094;</button>
+        <div class="video-track" id="videoTrack">
+          <article class="video-card">
+            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+            </video>
+            <h3>Live Operations Dashboard</h3>
+            <p>How operators track sensor streams and role-based alerts through WebSocket updates.</p>
+          </article>
+          <article class="video-card">
+            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1581093588401-16ecf5a74d66?auto=format&fit=crop&w=1200&q=80">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/bee.mp4" type="video/mp4" />
+            </video>
+            <h3>Anomaly Detection Workflow</h3>
+            <p>How the Isolation Forest engine flags abnormal patterns before escalation.</p>
+          </article>
+          <article class="video-card">
+            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1581090700227-1e8e5b8d0b1b?auto=format&fit=crop&w=1200&q=80">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4" />
+            </video>
+            <h3>Mobile Alert Response</h3>
+            <p>How field teams receive alerts through FCM and follow response workflows.</p>
+          </article>
+          <article class="video-card">
+            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1200&q=80">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+            </video>
+            <h3>Digital Twin Analytics</h3>
+            <p>Visualize high-risk zones and simulation events in the Three.js digital twin layer.</p>
+          </article>
+        </div>
+        <button class="slider-btn" id="nextBtn" aria-label="Next videos">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="strip reveal">
+      <p>Next step: pilot rollout with SMTP alerting, PDF export reporting, and company-based access control.</p>
+      <a class="btn btn-ghost" href="iletisim-en.html">Contact Us</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>AirSense Pro - Video Hub</p>
+      <div>
+        <a href="urunler-en.html">Products</a>
+        <a href="platform-en.html">Platform</a>
+        <a href="iletisim-en.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

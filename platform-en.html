@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirSense Pro | Platform</title>
+  <meta name="description" content="AirSense platform architecture: backend, dashboard, machine learning, and mobile layers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index-en.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
+      <button class="menu-toggle" type="button" id="menuToggle" aria-label="Open menu">Menu</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index-en.html">Home</a>
+        <a href="urunler-en.html">Products</a>
+        <a href="platform-en.html" class="active">Platform</a>
+        <a href="videolar-en.html">Videos</a>
+        <a href="iletisim-en.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language switch">
+          <a href="platform.html">TR</a>
+          <a href="platform-en.html" class="active">EN</a>
+        </div>
+        <a class="btn btn-small" href="iletisim-en.html">Request Demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero reveal">
+      <p class="eyebrow">Platform Architecture</p>
+      <h1>End-to-end observable, reliable, and scalable</h1>
+      <p class="lead">AirSense runs one continuous pipeline: MQTT ingestion to Redis Pub/Sub and WebSocket broadcast, then into dashboard and mobile clients.</p>
+    </section>
+
+    <section class="cards-grid reveal">
+      <article class="pro-card">
+        <h3>Backend Services</h3>
+        <p>FastAPI + MongoDB (motor) + JWT + MQTT worker + Redis cache/pubsub for real-time processing.</p>
+      </article>
+      <article class="pro-card">
+        <h3>Dashboard Layer</h3>
+        <p>React 19 + TypeScript + Vite + Tailwind + Recharts for live monitoring, alert history, and reporting.</p>
+      </article>
+      <article class="pro-card">
+        <h3>ML Engine</h3>
+        <p>Scikit-learn Isolation Forest with NumPy/Pandas for anomaly detection and decision support outputs.</p>
+      </article>
+      <article class="pro-card">
+        <h3>Mobile and Notifications</h3>
+        <p>Flutter + Provider + Dio + FCM for push notifications, live values, and field response workflows.</p>
+      </article>
+      <article class="pro-card">
+        <h3>Digital Twin Engine</h3>
+        <p>FastAPI backend + React/Three.js 3D layer for gas leak, fire, and evacuation simulations.</p>
+      </article>
+    </section>
+
+    <section class="strip reveal">
+      <p>Data flow: ESP32 -> MQTT Broker -> Worker -> MongoDB + Redis -> WebSocket Gateway -> Dashboard/Mobile.</p>
+      <a class="btn btn-ghost" href="videolar-en.html">Open Videos</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>AirSense Pro - Platform</p>
+      <div>
+        <a href="urunler-en.html">Products</a>
+        <a href="videolar-en.html">Videos</a>
+        <a href="iletisim-en.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

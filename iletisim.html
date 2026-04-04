@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirSense Pro | Iletisim</title>
+  <meta name="description" content="AirSense Pro demo talebi ve kurumsal iletişim sayfası." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
+      <button class="menu-toggle" type="button" id="menuToggle" aria-label="Menüyü aç">Menu</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Anasayfa</a>
+        <a href="urunler.html">Urunler</a>
+        <a href="platform.html">Platform</a>
+        <a href="videolar.html">Videolar</a>
+        <a href="iletisim.html" class="active">Iletisim</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Dil secimi">
+          <a href="iletisim.html" class="active">TR</a>
+          <a href="iletisim-en.html">EN</a>
+        </div>
+        <a class="btn btn-small" href="iletisim.html">Demo Talebi</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero reveal">
+      <p class="eyebrow">Iletisim ve Demo</p>
+      <h1>Projenizi birlikte planlayalim</h1>
+      <p class="lead">Pilot kurulum, MQTT broker baglantisi, company bazli kullanici yonetimi, email alarm ve PDF raporlama kapsamini birlikte netlestirelim.</p>
+    </section>
+
+    <section class="contact-block reveal">
+      <article class="pro-card">
+        <h3>Iletisim Bilgileri</h3>
+        <p>E-posta: sales@airsensepro.com</p>
+        <p>Telefon: +90 212 000 00 00</p>
+        <p>Adres: Istanbul Teknoloji Vadisi</p>
+        <p>API Dokumantasyon: /docs ve /redoc</p>
+      </article>
+
+      <form class="contact-form pro-card">
+        <label for="name">Ad Soyad</label>
+        <input id="name" type="text" placeholder="Ad Soyad" required />
+
+        <label for="mail">Kurumsal E-posta</label>
+        <input id="mail" type="email" placeholder="ornek@sirket.com" required />
+
+        <label for="company">Sirket</label>
+        <input id="company" type="text" placeholder="Sirket adi" required />
+
+        <label for="note">Not</label>
+        <input id="note" type="text" placeholder="Ornek: 2 tesis, 40 sensor noktasi, mobil alarm ve PDF rapor" />
+
+        <button type="submit" class="btn">Toplanti Talebi Gonder</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>AirSense Pro - Iletisim</p>
+      <div>
+        <a href="urunler.html">Urunler</a>
+        <a href="platform.html">Platform</a>
+        <a href="videolar.html">Videolar</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

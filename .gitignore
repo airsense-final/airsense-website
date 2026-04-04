@@ -1,0 +1,42 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Build outputs / temporary artifacts
+dist/
+build/
+coverage/
+.cache/
+.tmp/
+tmp/
+
+# Node ecosystem (if build tooling is added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Optional deployment/platform artifacts
+.vercel/
+.netlify/
+
+# Certificates / keys
+*.pem
+*.key
+*.crt

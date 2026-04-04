@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirSense Pro | Urunler</title>
+  <meta name="description" content="AirSense Pro ürünleri: sensör setleri, saha cihazları ve kurumsal paketler." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
+      <button class="menu-toggle" type="button" id="menuToggle" aria-label="Menüyü aç">Menu</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Anasayfa</a>
+        <a href="urunler.html" class="active">Urunler</a>
+        <a href="platform.html">Platform</a>
+        <a href="videolar.html">Videolar</a>
+        <a href="iletisim.html">Iletisim</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Dil secimi">
+          <a href="urunler.html" class="active">TR</a>
+          <a href="urunler-en.html">EN</a>
+        </div>
+        <a class="btn btn-small" href="iletisim.html">Demo Talebi</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero reveal">
+      <p class="eyebrow">Urun Portfoyu</p>
+      <h1>Sahanin gercek ihtiyacina gore sekillenen paketler</h1>
+      <p class="lead">Paketler, backenddeki gercek sensor katalogu (MQ-9/MQ-4/MQ-7/MQ-3/MQ-135/SCD40/DHT11/BH1750) ve alarm akisi baz alinarak tasarlanir.</p>
+    </section>
+
+    <section class="cards-grid reveal">
+      <article class="pro-card">
+        <h3>Baslangic Paketi</h3>
+        <p>MQ serisi gaz sensorleri ile temel panel, esik alarm ve e-posta bildirim baslangici.</p>
+        <ul>
+          <li>MQ4, MQ7, MQ135 + DHT11 temel set</li>
+          <li>Gercek zamanli panel (React + WebSocket)</li>
+          <li>Esik bazli alarm ve SMTP e-posta</li>
+        </ul>
+      </article>
+      <article class="pro-card">
+        <h3>Uretim Paketi</h3>
+        <p>Orta olcek tesisler icin coklu cihaz ve ML anomali skorlamasiyla erken risk yakalama.</p>
+        <ul>
+          <li>Coklu cihazdan MQTT veri toplama</li>
+          <li>Isolation Forest tabanli anomali kontrolu</li>
+          <li>FCM mobil bildirim ve alarm yonetimi</li>
+        </ul>
+      </article>
+      <article class="pro-card">
+        <h3>Kurumsal Paket</h3>
+        <p>Cok tesisli kurgu, dijital ikiz simulasyonlari, RBAC ve PDF raporlamayla kurumsal operasyon.</p>
+        <ul>
+          <li>Role dayali yetkilendirme ve denetim izi</li>
+          <li>Dijital Ikiz (FastAPI + React + Three.js)</li>
+          <li>Alarm/Anomali PDF disa aktarma</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="strip reveal">
+      <p>Teknik yigin: FastAPI, MongoDB, Redis, MQTT, React 19, Flutter, Isolation Forest ve Three.js.</p>
+      <a class="btn btn-ghost" href="platform.html">Platforma Git</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>AirSense Pro - Urunler</p>
+      <div>
+        <a href="platform.html">Platform</a>
+        <a href="videolar.html">Videolar</a>
+        <a href="iletisim.html">Iletisim</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
