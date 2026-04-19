@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
@@ -41,29 +42,63 @@
     </section>
 
     <section class="contact-block reveal">
-      <article class="pro-card">
-        <h3>Contact Information</h3>
-        <p>Email: sales@airsensepro.com</p>
-        <p>Phone: +90 212 000 00 00</p>
-        <p>Address: Istanbul Technology Valley</p>
-        <p>API Documentation: /docs and /redoc</p>
-      </article>
+      <div class="contact-info">
+        <div class="info-card">
+          <i data-lucide="mail"></i>
+          <div>
+            <h4>Email</h4>
+            <p>airsense.notification@gmail.com</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i data-lucide="phone"></i>
+          <div>
+            <h4>Phone</h4>
+            <p>+90 545 355 3617</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i data-lucide="map-pin"></i>
+          <div>
+            <h4>Address</h4>
+            <p>Yasar University, Izmir, Turkey</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i data-lucide="file-text"></i>
+          <div>
+            <h4>API Documentation</h4>
+            <p>/docs and /redoc</p>
+          </div>
+        </div>
+      </div>
 
-      <form class="contact-form pro-card">
-        <label for="name">Full Name</label>
-        <input id="name" type="text" placeholder="Full Name" required />
+      <div class="contact-form-container pro-card">
+        <h3>Request a Demo</h3>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" placeholder="Your full name" required />
+          </div>
 
-        <label for="mail">Business Email</label>
-        <input id="mail" type="email" placeholder="example@company.com" required />
+          <div class="form-group">
+            <label for="mail">Business Email</label>
+            <input id="mail" type="email" placeholder="example@company.com" required />
+          </div>
 
-        <label for="company">Company</label>
-        <input id="company" type="text" placeholder="Company name" required />
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input id="company" type="text" placeholder="Your company name" required />
+          </div>
 
-        <label for="note">Note</label>
-        <input id="note" type="text" placeholder="Example: 2 facilities, 40 sensor points, mobile alerts and PDF reports" />
+          <div class="form-group">
+            <label for="note">Your Note</label>
+            <textarea id="note" rows="4" placeholder="Example: We are interested in 2 facilities, 40 sensor points, mobile alerts and PDF reporting."></textarea>
+          </div>
 
-        <button type="submit" class="btn">Send Meeting Request</button>
-      </form>
+          <button type="submit" class="btn">Send Meeting Request</button>
+        </form>
+      </div>
     </section>
   </main>
 
