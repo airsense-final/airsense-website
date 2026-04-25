@@ -532,23 +532,6 @@ h3 {
   gap: 14px;
 }
 
-.contact-form {
-  display: grid;
-  gap: 8px;
-}
-
-.contact-form label {
-  font-weight: 700;
-  color: #2c4352;
-}
-
-.contact-form input {
-  border: 1px solid #bfd0dd;
-  border-radius: 10px;
-  padding: 11px;
-  font: inherit;
-  background: #fff;
-}
 
 .site-footer {
   width: min(1200px, 94vw);
@@ -678,3 +661,110 @@ h3 {
     align-items: flex-start;
   }
 }
+
+/* Modernized Contact Page Styles */
+.contact-info {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(199, 214, 226, 0.4);
+  border-radius: var(--radius-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateX(6px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand);
+}
+
+.info-card i {
+  color: var(--brand);
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.info-card h4 {
+  margin: 0 0 4px;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.contact-form-container {
+  padding: 40px !important;
+}
+
+.contact-form-container h3 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid #d1dee8;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fff;
+  transition: all 0.25s ease;
+  color: var(--ink);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px rgba(15, 159, 154, 0.12);
+}
+
+.contact-form label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #34495e;
+  margin-left: 4px;
+}
+
+.contact-form .btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 860px) {
+  .contact-info {
+    order: 2;
+  }
+  .contact-form-container {
+    order: 1;
+    padding: 24px !important;
+  }
+}
+
