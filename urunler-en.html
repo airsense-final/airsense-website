@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
@@ -41,7 +42,10 @@
     </section>
 
     <section class="cards-grid reveal">
-      <article class="pro-card">
+      <article class="product-card">
+        <div class="card-icon-wrap">
+          <i data-lucide="package"></i>
+        </div>
         <h3>Starter Kit</h3>
         <p>MQ gas bundle with core dashboard, threshold alerting, and email notifications.</p>
         <ul>
@@ -49,24 +53,44 @@
           <li>Real-time panel (React + WebSocket)</li>
           <li>Threshold-based alert emails (SMTP)</li>
         </ul>
+        <div class="card-footer">
+          <a href="iletisim-en.html" class="btn btn-ghost">Learn More</a>
+        </div>
       </article>
-      <article class="pro-card">
+
+      <article class="product-card featured">
+        <span class="badge-featured">POPULAR</span>
+        <div class="card-icon-wrap">
+          <i data-lucide="layers"></i>
+        </div>
         <h3>Production Kit</h3>
         <p>For mid-size facilities with multi-device ingestion and ML anomaly scoring.</p>
         <ul>
           <li>Multi-device MQTT ingestion</li>
           <li>Isolation Forest anomaly checks</li>
           <li>FCM mobile notifications</li>
+          <li>Weekly automated PDF reporting</li>
         </ul>
+        <div class="card-footer">
+          <a href="iletisim-en.html" class="btn">Request Demo</a>
+        </div>
       </article>
-      <article class="pro-card">
+
+      <article class="product-card">
+        <div class="card-icon-wrap">
+          <i data-lucide="building-2"></i>
+        </div>
         <h3>Enterprise Suite</h3>
         <p>Multi-site operations with digital twin simulations, RBAC, and PDF reporting.</p>
         <ul>
           <li>Role-based access and audit trail</li>
           <li>Digital Twin (FastAPI + React + Three.js)</li>
           <li>Alert/anomaly PDF export</li>
+          <li>On-premise deployment support</li>
         </ul>
+        <div class="card-footer">
+          <a href="iletisim-en.html" class="btn btn-ghost">Contact Us</a>
+        </div>
       </article>
     </section>
 

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
@@ -35,38 +36,61 @@
 
   <main class="page-shell">
     <section class="page-hero reveal">
-      <p class="eyebrow">Urun Portfoyu</p>
-      <h1>Sahanin gercek ihtiyacina gore sekillenen paketler</h1>
-      <p class="lead">Paketler, backenddeki gercek sensor katalogu (MQ-9/MQ-4/MQ-7/MQ-3/MQ-135/SCD40/DHT11/BH1750) ve alarm akisi baz alinarak tasarlanir.</p>
+      <p class="eyebrow">Ürün Portfoyu</p>
+      <h1>Sahanın gerçek ihtiyacına göre şekillenen paketler</h1>
+      <p class="lead">Paketler, sensör kataloğu ve alarm akışı baz alınarak tasarlanır.</p>
     </section>
 
     <section class="cards-grid reveal">
-      <article class="pro-card">
-        <h3>Baslangic Paketi</h3>
-        <p>MQ serisi gaz sensorleri ile temel panel, esik alarm ve e-posta bildirim baslangici.</p>
+      <article class="product-card">
+        <div class="card-icon-wrap">
+          <i data-lucide="package"></i>
+        </div>
+        <h3>Başlangıç Paketi</h3>
+        <p>MQ serisi gaz sensörleri ile temel panel, eşik alarm ve e-posta bildirim başlangıcı.</p>
         <ul>
           <li>MQ4, MQ7, MQ135 + DHT11 temel set</li>
-          <li>Gercek zamanli panel (React + WebSocket)</li>
-          <li>Esik bazli alarm ve SMTP e-posta</li>
+          <li>Gerçek zamanlı panel (React + WebSocket)</li>
+          <li>Eşik bazlı alarm ve SMTP e-posta</li>
         </ul>
+        <div class="card-footer">
+          <a href="iletisim.html" class="btn btn-ghost">Detaylı Bilgi</a>
+        </div>
       </article>
-      <article class="pro-card">
-        <h3>Uretim Paketi</h3>
-        <p>Orta olcek tesisler icin coklu cihaz ve ML anomali skorlamasiyla erken risk yakalama.</p>
+
+      <article class="product-card featured">
+        <span class="badge-featured">POPÜLER</span>
+        <div class="card-icon-wrap">
+          <i data-lucide="layers"></i>
+        </div>
+        <h3>Üretim Paketi</h3>
+        <p>Orta ölçek tesisler için çoklu cihaz ve ML anomali skorlamasıyla erken risk yakalama.</p>
         <ul>
-          <li>Coklu cihazdan MQTT veri toplama</li>
-          <li>Isolation Forest tabanli anomali kontrolu</li>
-          <li>FCM mobil bildirim ve alarm yonetimi</li>
+          <li>Çoklu cihazdan MQTT veri toplama</li>
+          <li>Isolation Forest tabanlı anomali kontrolü</li>
+          <li>FCM mobil bildirim ve alarm yönetimi</li>
+          <li>Haftalık otomatik PDF raporlama</li>
         </ul>
+        <div class="card-footer">
+          <a href="iletisim.html" class="btn">Demo Talebi</a>
+        </div>
       </article>
-      <article class="pro-card">
+
+      <article class="product-card">
+        <div class="card-icon-wrap">
+          <i data-lucide="building-2"></i>
+        </div>
         <h3>Kurumsal Paket</h3>
-        <p>Cok tesisli kurgu, dijital ikiz simulasyonlari, RBAC ve PDF raporlamayla kurumsal operasyon.</p>
+        <p>Çok tesisli kurgu, dijital ikiz simülasyonları, RBAC ve PDF raporlamayla kurumsal operasyon.</p>
         <ul>
-          <li>Role dayali yetkilendirme ve denetim izi</li>
-          <li>Dijital Ikiz (FastAPI + React + Three.js)</li>
-          <li>Alarm/Anomali PDF disa aktarma</li>
+          <li>Rol tabanlı yetkilendirme ve denetim izi</li>
+          <li>Dijital İkiz (FastAPI + React + Three.js)</li>
+          <li>Alarm/Anomali PDF dışa aktarma</li>
+          <li>On-premise kurulum desteği</li>
         </ul>
+        <div class="card-footer">
+          <a href="iletisim.html" class="btn btn-ghost">Bize Ulaşın</a>
+        </div>
       </article>
     </section>
 
