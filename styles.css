@@ -27,8 +27,8 @@
   --bg-2: #f1f5f9;
   --ink: #0f172a;
   --muted: #475569;
-  --brand: #3b82f6;
-  --brand-2: #10b981;
+  --brand: #3b82f6; /* Modern Blue */
+  --brand-2: #10b981; /* Light Green */
   --brand-3: #0ea5e9;
   --glass-bg: rgba(255, 255, 255, 0.85);
   --glass-border: rgba(0, 0, 0, 0.06);
@@ -109,11 +109,11 @@ h1, h2, h3 { font-family: "Outfit", sans-serif; color: var(--ink); font-weight: 
 .main-nav a:hover { color: var(--ink); background: rgba(255, 255, 255, 0.05); }
 .main-nav a.active { background: var(--brand); color: #fff; }
 
-/* Header Actions Wrapper - The requested area */
+/* Header Actions Wrapper */
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 12px; /* Professional spacing */
+  gap: 12px;
   flex-shrink: 0;
 }
 
@@ -141,21 +141,23 @@ h1, h2, h3 { font-family: "Outfit", sans-serif; color: var(--ink); font-weight: 
 
 /* Responsive adjustments for header */
 @media (max-width: 1100px) {
-  .main-nav { display: none; } /* Hide center nav on medium screens to keep actions visible */
+  .main-nav { display: none; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .header-inner { padding: 6px 6px 6px 16px; }
-  .header-actions { gap: 6px; }
-  .brand span:not(.brand-mark) { display: none; } /* Hide brand text on tiny screens */
-  .btn-primary.header-btn { padding: 8px 14px; font-size: 0.75rem; }
-  .lang-switch a { padding: 5px 8px; font-size: 0.65rem; }
+  .header-actions { gap: 8px; }
+  .brand span { display: none; } /* Hide "AirSense Pro" text to keep brand mark and actions */
+  .brand-mark { width: 18px; height: 18px; }
+  .btn.header-btn { padding: 8px 14px; font-size: 0.8rem; }
+  .lang-switch a { padding: 6px 10px; font-size: 0.65rem; }
+  .theme-toggle { width: 34px; height: 34px; }
 }
 
 /* Page Shell and Cards */
 .page-shell { width: min(1160px, 94vw); margin: 60px auto 100px; display: grid; gap: 60px; }
 
-.card-base, .hero, .page-hero, .route-card, .product-card, .pro-card, .hero-panel, .video-section, .contact-block {
+.card-base, .hero, .page-hero, .route-grid > article, .cards-grid > article, .hero-panel, .video-section, .contact-block {
   background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-lg);
   backdrop-filter: blur(20px); box-shadow: var(--card-shadow); padding: 40px;
   position: relative; overflow: hidden; transition: all 0.4s ease;
@@ -169,6 +171,20 @@ h1, h2, h3 { font-family: "Outfit", sans-serif; color: var(--ink); font-weight: 
 }
 
 .hero-split { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+
+@media (max-width: 900px) {
+  .hero-split { grid-template-columns: 1fr; }
+  .page-shell { gap: 40px; margin-top: 40px; }
+  .card-base, .hero, .page-hero, .route-grid > article, .cards-grid > article, .hero-panel, .video-section, .contact-block { padding: 30px; }
+}
+
+@media (max-width: 600px) {
+  .page-shell { gap: 30px; }
+  .card-base, .hero, .page-hero, .route-grid > article, .cards-grid > article, .hero-panel, .video-section, .contact-block { padding: 24px; border-radius: 20px; }
+  .hero h1 { font-size: 2rem; }
+  .lead { font-size: 1.1rem; }
+}
+
 .hero h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); margin: 0 0 24px; }
 .lead { font-size: 1.2rem; color: var(--muted); max-width: 600px; margin-bottom: 32px; }
 .eyebrow { display: inline-block; padding: 6px 14px; background: rgba(99, 102, 241, 0.1); color: var(--brand); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.12em; border-radius: 8px; margin-bottom: 24px; text-transform: uppercase; }
@@ -198,12 +214,25 @@ h1, h2, h3 { font-family: "Outfit", sans-serif; color: var(--ink); font-weight: 
 
 .strip { padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(90deg, rgba(99, 102, 241, 0.1), transparent); border-left: 4px solid var(--brand); }
 
+@media (max-width: 768px) {
+  .strip { flex-direction: column; align-items: flex-start; gap: 20px; }
+}
+
 .contact-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px; }
+
+@media (max-width: 900px) {
+  .contact-block { grid-template-columns: 1fr; }
+}
+
 .info-card { padding: 24px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-md); display: flex; gap: 20px; align-items: center; }
 .contact-form input, .contact-form textarea { width: 100%; padding: 14px 18px; background: var(--bg-0); border: 1px solid var(--glass-border); border-radius: 10px; color: var(--ink); font-family: inherit; font-size: 1rem; transition: all 0.25s ease; }
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); }
 
-.hero-video-player { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; display: block; }
+.hero-video-player { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; display: block; border-radius: var(--radius-lg); }
+
+@media (max-width: 768px) {
+  .hero-video-player { aspect-ratio: 16 / 9; }
+}
 
 .reveal { opacity: 0; transform: translateY(30px) scale(0.98); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal.visible { opacity: 1; transform: translateY(0) scale(1); }
@@ -216,5 +245,19 @@ h1, h2, h3 { font-family: "Outfit", sans-serif; color: var(--ink); font-weight: 
 
 .site-footer { width: min(1160px, 94vw); margin: 0 auto 40px; padding-top: 40px; border-top: 1px solid var(--glass-border); display: flex; justify-content: space-between; align-items: center; }
 .footer-inner { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+
+@media (max-width: 600px) {
+  .footer-inner { flex-direction: column; gap: 20px; align-items: center; text-align: center; }
+  .footer-inner div { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+  .footer-inner a { margin: 0 10px; }
+}
+
 .footer-inner a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 24px; }
 .footer-inner a:hover { color: var(--ink); }
+
+/* Video Slider Mobile */
+@media (max-width: 768px) {
+  .slider-btn { display: none; }
+  .video-track { overflow-x: auto; padding-bottom: 20px; -webkit-overflow-scrolling: touch; }
+  .video-card { min-width: 85vw !important; }
+}
