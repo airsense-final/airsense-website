@@ -7,8 +7,9 @@
   <meta name="description" content="AirSense Pro ile tesisinizde hava kalitesini gerçek zamanlı izleyin, riski erken tespit edin, operasyonu tek merkezden yönetin." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
@@ -34,17 +35,13 @@
           <a href="index.html" class="active">TR</a>
           <a href="index-en.html">EN</a>
         </div>
-        <a class="btn btn-small" href="iletisim.html">Demo Talebi</a>
+        <a class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 100px;" href="iletisim.html">Demo Talebi</a>
       </div>
     </div>
   </header>
 
   <main class="page-shell">
     <section class="hero-video reveal" aria-label="AirSense urun tanitim videosu">
-      <div class="section-head">
-        <p class="eyebrow">URUN TANITIM VIDEOSU</p>
-        <h2>AirSense Urun Tanitim Akisi</h2>
-      </div>
       <video class="hero-video-player" autoplay muted loop playsinline preload="auto" tabindex="-1" aria-hidden="true">
         <source src="assets/videos/360-product-video.mp4" type="video/mp4" />
       </video>
@@ -55,69 +52,92 @@
         <p class="eyebrow">AIRSENSE PRO PLATFORMU</p>
         <h1>
           Riskleri
-          <span>gercek zamanli gorunur</span>
-          hale getirir.
+          <span style="background: linear-gradient(135deg, var(--brand), var(--brand-3)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">gercek zamanli</span>
+          yonetin.
         </h1>
         <p class="lead">
-          Sensor, yazilim, ML ve operasyon katmanlarini tek bir guvenlik deneyiminde birlestiren
-          AirSense Pro; kritik ortamlarda karar surelerini hizlandirir ve hatali reaksiyonlari azaltir.
+          Sensor, yazilim ve ML katmanlarini tek bir guvenlik deneyiminde birlestiren AirSense Pro; kritik tesislerde karar surelerini hizlandirir.
         </p>
         <div class="button-row">
-          <a class="btn" href="urunler.html">Urunleri Incele</a>
+          <a class="btn btn-primary" href="urunler.html">
+            <i data-lucide="layout-grid" style="width: 18px;"></i>
+            Urunleri Incele
+          </a>
           <a class="btn btn-ghost" href="videolar.html">Video Merkezi</a>
         </div>
       </div>
       <aside class="hero-panel reveal">
-        <h2>Operasyon KPI Panosu</h2>
+        <h2 style="margin-top: 0; font-size: 1.2rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Operasyonel KPI</h2>
         <ul class="kpi-list">
-          <li><strong><span data-counter="9">0</span></strong> sensor tipi (MQ-9, MQ-4, MQ-7, MQ-3, MQ-135, SCD40, DHT11 T/N, BH1750)</li>
-          <li><strong><span data-counter="5">0</span></strong> ana urun katmani (Backend, Dashboard, ML, Mobile, Digital Twin)</li>
-          <li><strong><span data-counter="333">0</span>+</strong> backend otomasyon testi (guncel CI cikisi)</li>
+          <li>
+            <strong><span data-counter="9">0</span></strong>
+            <span>Aktif Sensor Tipi</span>
+          </li>
+          <li>
+            <strong><span data-counter="5">0</span></strong>
+            <span>Entegre Katman</span>
+          </li>
+          <li>
+            <strong><span data-counter="333">0</span>+</strong>
+            <span>Otomasyon Testi</span>
+          </li>
         </ul>
-        <p>FastAPI + MongoDB + MQTT + Redis + JWT + Email + PDF Export + FCM akisiyla calisan tek platform.</p>
       </aside>
     </section>
 
     <section class="reveal">
-      <div class="section-head">
-        <p class="eyebrow">YONLENDIRILMIS DENEYIM</p>
-        <h2>Her ihtiyac icin ayri sayfa, net bilgi akisi</h2>
+      <div class="section-head" style="margin-bottom: 32px;">
+        <p class="eyebrow">Kesif</p>
+        <h2>Platformun tum detaylarini inceleyin</h2>
       </div>
-      <div class="route-grid">
+      <div class="route-grid reveal-stagger">
         <article class="route-card">
+          <div class="card-icon-wrap" style="background: rgba(45, 212, 191, 0.1); color: var(--accent-teal);">
+            <i data-lucide="package"></i>
+          </div>
           <h3>Urunler</h3>
-          <p>MQ serisi gaz sensorleri, DHT11 sicaklik-nem, SCD40 CO2 ve BH1750 isik izleme senaryolari.</p>
-          <a href="urunler.html">Sayfaya Git</a>
+          <p>Gaz, sicaklik ve hava kalitesi sensor setleri, saha cihazlari ve kurumsal paketler.</p>
+          <a href="urunler.html">Paketleri Gor</a>
         </article>
+
         <article class="route-card">
+          <div class="card-icon-wrap" style="background: rgba(56, 189, 248, 0.1); color: var(--brand-3);">
+            <i data-lucide="cpu"></i>
+          </div>
           <h3>Platform</h3>
-          <p>FastAPI API, React 19 panel, Isolation Forest ML ve Flutter mobil yigininin butun resmi.</p>
-          <a href="platform.html">Sayfaya Git</a>
+          <p>FastAPI, React, ML ve IoT yigininin uctan uca nasil calistigini teknik olarak inceleyin.</p>
+          <a href="platform.html">Mimarayi Gor</a>
         </article>
+
         <article class="route-card">
+          <div class="card-icon-wrap" style="background: rgba(168, 85, 247, 0.1); color: var(--accent-purple);">
+            <i data-lucide="play-circle"></i>
+          </div>
           <h3>Videolar</h3>
-          <p>Canli dashboard, alarm, ML anomali ve dijital ikiz akislarini kaydirarak inceleyin.</p>
-          <a href="videolar.html">Sayfaya Git</a>
+          <p>Alarm anlari, anomali tespiti ve dijital ikiz simülasyonlarinin canli kayitlari.</p>
+          <a href="videolar.html">Kayitlari Izle</a>
         </article>
+
         <article class="route-card">
+          <div class="card-icon-wrap" style="background: rgba(251, 146, 60, 0.1); color: var(--accent-orange);">
+            <i data-lucide="message-square"></i>
+          </div>
           <h3>Iletisim</h3>
-          <p>Pilot kurulum, SMTP email alarm yapisi, PDF raporlama ve rol bazli yetki planlamasi.</p>
-          <a href="iletisim.html">Sayfaya Git</a>
+          <p>Pilot kurulum talebi, SMTP kurulum destegi ve PDF raporlama planlamasi icin bize ulasin.</p>
+          <a href="iletisim.html">Demo Talebi</a>
         </article>
       </div>
     </section>
 
     <section class="strip reveal">
-      <p>
-        "Gercek zamanli MQTT veri akisi + ML anomali tespiti + email/mobil alarm ile operasyon sureleri netlesiyor."
-      </p>
-      <span>AirSense platform mimarisi - FastAPI, React, Flutter, Isolation Forest, Three.js</span>
+      <p>"Gercek zamanli MQTT veri akisi ve ML tabanli anomali tespiti ile operasyon surelerini kisaltin."</p>
+      <span style="font-weight: 700; color: var(--brand);">AirSense Pro Mimarisi</span>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>AirSense Pro - 2026</p>
+      <p style="margin:0; font-size: 0.9rem; color: var(--muted);">© 2026 AirSense Pro. Tum haklari saklidir.</p>
       <div>
         <a href="urunler.html">Urunler</a>
         <a href="platform.html">Platform</a>
@@ -128,5 +148,10 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
 </body>
 </html>

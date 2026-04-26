@@ -7,12 +7,14 @@
   <meta name="description" content="AirSense Pro product portfolio: sensor sets, field devices, and enterprise-grade packages." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="glow glow-a" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="header-inner">
       <a href="index-en.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
@@ -29,7 +31,7 @@
           <a href="urunler.html">TR</a>
           <a href="urunler-en.html" class="active">EN</a>
         </div>
-        <a class="btn btn-small" href="iletisim-en.html">Request Demo</a>
+        <a class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 100px;" href="iletisim-en.html">Request Demo</a>
       </div>
     </div>
   </header>
@@ -37,72 +39,72 @@
   <main class="page-shell">
     <section class="page-hero reveal">
       <p class="eyebrow">Product Portfolio</p>
-      <h1>Packages shaped around real field conditions</h1>
-      <p class="lead">Packages are mapped to the real backend sensor catalog (MQ-9/MQ-4/MQ-7/MQ-3/MQ-135/SCD40/DHT11/BH1750) and alert workflows.</p>
+      <h1>Solutions shaped by real-world needs</h1>
+      <p class="lead">End-to-end packages designed based on sensor catalog and alerting workflows.</p>
     </section>
 
-    <section class="cards-grid reveal">
+    <section class="cards-grid reveal-stagger">
       <article class="product-card">
         <div class="card-icon-wrap">
           <i data-lucide="package"></i>
         </div>
         <h3>Starter Kit</h3>
-        <p>MQ gas bundle with core dashboard, threshold alerting, and email notifications.</p>
+        <p>Essential gas sensors and real-time dashboard. The first step to digitization.</p>
         <ul>
-          <li>MQ4, MQ7, MQ135 + DHT11 starter set</li>
-          <li>Real-time panel (React + WebSocket)</li>
-          <li>Threshold-based alert emails (SMTP)</li>
+          <li>MQ4, MQ7, MQ135 + DHT11 set</li>
+          <li>Live Dashboard (WebSocket)</li>
+          <li>Threshold-based SMTP alerts</li>
         </ul>
-        <div class="card-footer">
-          <a href="iletisim-en.html" class="btn btn-ghost">Learn More</a>
+        <div class="card-footer" style="margin-top: auto;">
+          <a href="iletisim-en.html" class="btn btn-ghost" style="width: 100%;">Learn More</a>
         </div>
       </article>
 
       <article class="product-card featured">
         <span class="badge-featured">POPULAR</span>
-        <div class="card-icon-wrap">
+        <div class="card-icon-wrap" style="background: rgba(45, 212, 191, 0.1); color: var(--accent-teal);">
           <i data-lucide="layers"></i>
         </div>
         <h3>Production Kit</h3>
-        <p>For mid-size facilities with multi-device ingestion and ML anomaly scoring.</p>
+        <p>For mid-size facilities with multi-device ingestion and ML anomaly detection.</p>
         <ul>
           <li>Multi-device MQTT ingestion</li>
-          <li>Isolation Forest anomaly checks</li>
-          <li>FCM mobile notifications</li>
-          <li>Weekly automated PDF reporting</li>
+          <li>Isolation Forest ML Anomaly</li>
+          <li>FCM Mobile Push Alerts</li>
+          <li>Weekly Automated PDF Reports</li>
         </ul>
-        <div class="card-footer">
-          <a href="iletisim-en.html" class="btn">Request Demo</a>
+        <div class="card-footer" style="margin-top: auto;">
+          <a href="iletisim-en.html" class="btn btn-primary" style="width: 100%;">Request Demo</a>
         </div>
       </article>
 
       <article class="product-card">
-        <div class="card-icon-wrap">
+        <div class="card-icon-wrap" style="background: rgba(56, 189, 248, 0.1); color: var(--brand-3);">
           <i data-lucide="building-2"></i>
         </div>
         <h3>Enterprise Suite</h3>
-        <p>Multi-site operations with digital twin simulations, RBAC, and PDF reporting.</p>
+        <p>Digital twin, RBAC, and full-scale reporting for enterprise-level operations.</p>
         <ul>
-          <li>Role-based access and audit trail</li>
-          <li>Digital Twin (FastAPI + React + Three.js)</li>
-          <li>Alert/anomaly PDF export</li>
-          <li>On-premise deployment support</li>
+          <li>Role-Based Access (RBAC)</li>
+          <li>3D Digital Twin (Three.js)</li>
+          <li>Advanced Anomaly Analytics</li>
+          <li>On-premise Deployment</li>
         </ul>
-        <div class="card-footer">
-          <a href="iletisim-en.html" class="btn btn-ghost">Contact Us</a>
+        <div class="card-footer" style="margin-top: auto;">
+          <a href="iletisim-en.html" class="btn btn-ghost" style="width: 100%;">Contact Us</a>
         </div>
       </article>
     </section>
 
     <section class="strip reveal">
-      <p>Stack in production scope: FastAPI, MongoDB, Redis, MQTT, React 19, Flutter, Isolation Forest, and Three.js.</p>
-      <a class="btn btn-ghost" href="platform-en.html">Go to Platform</a>
+      <p>Tech stack: FastAPI, React 19, Flutter, Isolation Forest, and Three.js.</p>
+      <a class="card-link" href="platform-en.html">View Architecture</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>AirSense Pro - Products</p>
+      <p style="margin:0; font-size: 0.9rem; color: var(--muted);">© 2026 AirSense Pro.</p>
       <div>
         <a href="platform-en.html">Platform</a>
         <a href="videolar-en.html">Videos</a>
@@ -111,5 +113,10 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script>
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
 </body>
 </html>

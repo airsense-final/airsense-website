@@ -7,8 +7,9 @@
   <meta name="description" content="Monitor air quality in real time, detect risk early, and manage operations from one control center with AirSense Pro." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
@@ -34,17 +35,13 @@
           <a href="index.html">TR</a>
           <a href="index-en.html" class="active">EN</a>
         </div>
-        <a class="btn btn-small" href="iletisim-en.html">Request Demo</a>
+        <a class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 100px;" href="iletisim-en.html">Request Demo</a>
       </div>
     </div>
   </header>
 
   <main class="page-shell">
     <section class="hero-video reveal" aria-label="AirSense product showcase video">
-      <div class="section-head">
-        <p class="eyebrow">PRODUCT SHOWCASE VIDEO</p>
-        <h2>AirSense Product Walkthrough</h2>
-      </div>
       <video class="hero-video-player" autoplay muted loop playsinline preload="auto" tabindex="-1" aria-hidden="true">
         <source src="assets/videos/360-product-video.mp4" type="video/mp4" />
       </video>
@@ -54,68 +51,92 @@
       <div>
         <p class="eyebrow">AIRSENSE PRO PLATFORM</p>
         <h1>
-          Turn invisible
-          <span>air risks into visible</span>
-          decisions.
+          Manage risks
+          <span style="background: linear-gradient(135deg, var(--brand), var(--brand-3)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">in real-time.</span>
         </h1>
         <p class="lead">
-          AirSense Pro brings sensors, software, ML, and operations into one unified safety layer,
-          speeding up critical decisions and reducing reaction errors in high-risk facilities.
+          Combining sensors, software, and ML layers into a single security experience, AirSense Pro accelerates decisions in critical facilities.
         </p>
         <div class="button-row">
-          <a class="btn" href="urunler-en.html">Explore Products</a>
+          <a class="btn btn-primary" href="urunler-en.html">
+            <i data-lucide="layout-grid" style="width: 18px;"></i>
+            Explore Products
+          </a>
           <a class="btn btn-ghost" href="videolar-en.html">Video Hub</a>
         </div>
       </div>
       <aside class="hero-panel reveal">
-        <h2>Operational KPI Snapshot</h2>
+        <h2 style="margin-top: 0; font-size: 1.2rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Operational KPI</h2>
         <ul class="kpi-list">
-          <li><strong><span data-counter="9">0</span></strong> sensor types (MQ-9, MQ-4, MQ-7, MQ-3, MQ-135, SCD40, DHT11 T/H, BH1750)</li>
-          <li><strong><span data-counter="5">0</span></strong> core product layers (Backend, Dashboard, ML, Mobile, Digital Twin)</li>
-          <li><strong><span data-counter="333">0</span>+</strong> backend automated tests (latest CI run)</li>
+          <li>
+            <strong><span data-counter="9">0</span></strong>
+            <span>Active Sensor Types</span>
+          </li>
+          <li>
+            <strong><span data-counter="5">0</span></strong>
+            <span>Integrated Layers</span>
+          </li>
+          <li>
+            <strong><span data-counter="333">0</span>+</strong>
+            <span>Automation Tests</span>
+          </li>
         </ul>
-        <p>Built on FastAPI + MongoDB + MQTT + Redis + JWT + Email + PDF Export + FCM.</p>
       </aside>
     </section>
 
     <section class="reveal">
-      <div class="section-head">
-        <p class="eyebrow">GUIDED EXPERIENCE</p>
-        <h2>Dedicated pages for each need, with clear navigation</h2>
+      <div class="section-head" style="margin-bottom: 32px;">
+        <p class="eyebrow">Discovery</p>
+        <h2>Explore every detail of the platform</h2>
       </div>
-      <div class="route-grid">
+      <div class="route-grid reveal-stagger">
         <article class="route-card">
+          <div class="card-icon-wrap" style="background: rgba(45, 212, 191, 0.1); color: var(--accent-teal);">
+            <i data-lucide="package"></i>
+          </div>
           <h3>Products</h3>
-          <p>MQ gas family, DHT11 temperature-humidity, SCD40 CO2, and BH1750 light monitoring scenarios.</p>
-          <a href="urunler-en.html">Open Page</a>
+          <p>Gas, temperature, and air quality sensor sets, field devices, and corporate packages.</p>
+          <a href="urunler-en.html">View Packages</a>
         </article>
+
         <article class="route-card">
+          <div class="card-icon-wrap" style="background: rgba(56, 189, 248, 0.1); color: var(--brand-3);">
+            <i data-lucide="cpu"></i>
+          </div>
           <h3>Platform</h3>
-          <p>A complete view of FastAPI API, React 19 dashboard, Isolation Forest ML, and Flutter mobile stack.</p>
-          <a href="platform-en.html">Open Page</a>
+          <p>Technically examine how our FastAPI, React, ML, and IoT stack works end-to-end.</p>
+          <a href="platform-en.html">View Architecture</a>
         </article>
+
         <article class="route-card">
+          <div class="card-icon-wrap" style="background: rgba(168, 85, 247, 0.1); color: var(--accent-purple);">
+            <i data-lucide="play-circle"></i>
+          </div>
           <h3>Videos</h3>
-          <p>Review dashboard, alerting, ML anomaly, and digital twin flows with horizontal video navigation.</p>
-          <a href="videolar-en.html">Open Page</a>
+          <p>Live recordings of alert moments, anomaly detection, and digital twin simulations.</p>
+          <a href="videolar-en.html">Watch Recordings</a>
         </article>
+
         <article class="route-card">
+          <div class="card-icon-wrap" style="background: rgba(251, 146, 60, 0.1); color: var(--accent-orange);">
+            <i data-lucide="message-square"></i>
+          </div>
           <h3>Contact</h3>
-          <p>Pilot rollout, SMTP alert email setup, PDF reporting, and RBAC planning.</p>
-          <a href="iletisim-en.html">Open Page</a>
+          <p>Reach out for pilot rollout requests, SMTP setup support, and PDF reporting planning.</p>
+          <a href="iletisim-en.html">Request Demo</a>
         </article>
       </div>
     </section>
 
     <section class="strip reveal">
-      <p>"Real-time MQTT ingestion + ML anomaly detection + email/mobile alerts creates clear operational response loops."</p>
-      <span>AirSense architecture - FastAPI, React, Flutter, Isolation Forest, Three.js</span>
+      <p>"Shorten response times with real-time MQTT data streaming and ML-based anomaly detection."</p>
+      <span style="font-weight: 700; color: var(--brand);">AirSense Pro Architecture</span>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>AirSense Pro - 2026</p>
+      <p style="margin:0; font-size: 0.9rem; color: var(--muted);">© 2026 AirSense Pro. All rights reserved.</p>
       <div>
         <a href="urunler-en.html">Products</a>
         <a href="platform-en.html">Platform</a>
@@ -126,5 +147,10 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
 </body>
 </html>
