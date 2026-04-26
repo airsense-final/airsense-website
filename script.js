@@ -147,7 +147,7 @@ if (form) {
     const submitBtn = form.querySelector('button[type="submit"]');
     if (submitBtn) {
       const isEnglish = document.documentElement.lang === 'en';
-      submitBtn.textContent = isEnglish ? 'Request Received' : 'Talebiniz alindi';
+      submitBtn.textContent = isEnglish ? 'Request Received' : 'Talebiniz alındı';
       submitBtn.disabled = true;
       submitBtn.style.opacity = '0.8';
     }
