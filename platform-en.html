@@ -4,14 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AirSense Pro | Platform</title>
-  <meta name="description" content="AirSense platform architecture: backend, dashboard, machine learning, and mobile layers." />
+  <meta name="description" content="AirSense platform architecture: backend, dashboard, ML, and mobile layers." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="header-inner">
       <a href="index-en.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
@@ -28,7 +31,7 @@
           <a href="platform.html">TR</a>
           <a href="platform-en.html" class="active">EN</a>
         </div>
-        <a class="btn btn-small" href="iletisim-en.html">Request Demo</a>
+        <a class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 100px;" href="iletisim-en.html">Request Demo</a>
       </div>
     </div>
   </header>
@@ -36,42 +39,61 @@
   <main class="page-shell">
     <section class="page-hero reveal">
       <p class="eyebrow">Platform Architecture</p>
-      <h1>End-to-end observable, reliable, and scalable</h1>
-      <p class="lead">AirSense runs one continuous pipeline: MQTT ingestion to Redis Pub/Sub and WebSocket broadcast, then into dashboard and mobile clients.</p>
+      <h1>End-to-end observable and reliable</h1>
+      <p class="lead">AirSense architecture is optimized from MQTT ingestion to Redis Pub/Sub and WebSocket streaming.</p>
     </section>
 
-    <section class="cards-grid reveal">
+    <section class="cards-grid reveal-stagger">
       <article class="pro-card">
+        <div class="card-icon-wrap" style="color: var(--accent-blue);">
+          <i data-lucide="server"></i>
+        </div>
         <h3>Backend Services</h3>
-        <p>FastAPI + MongoDB (motor) + JWT + MQTT worker + Redis cache/pubsub for real-time processing.</p>
+        <p>Millisecond-based data processing with FastAPI, MongoDB, and Redis for high availability.</p>
       </article>
+
       <article class="pro-card">
+        <div class="card-icon-wrap" style="color: var(--accent-purple);">
+          <i data-lucide="layout"></i>
+        </div>
         <h3>Dashboard Layer</h3>
-        <p>React 19 + TypeScript + Vite + Tailwind + Recharts for live monitoring, alert history, and reporting.</p>
+        <p>Built with React 19 and TypeScript for an ultra-fast, proactive operational experience.</p>
       </article>
+
       <article class="pro-card">
+        <div class="card-icon-wrap" style="color: var(--accent-teal);">
+          <i data-lucide="brain-circuit"></i>
+        </div>
         <h3>ML Engine</h3>
-        <p>Scikit-learn Isolation Forest with NumPy/Pandas for anomaly detection and decision support outputs.</p>
+        <p>Capture even minute deviations in production lines using the Isolation Forest algorithm.</p>
       </article>
+
       <article class="pro-card">
-        <h3>Mobile and Notifications</h3>
-        <p>Flutter + Provider + Dio + FCM for push notifications, live values, and field response workflows.</p>
+        <div class="card-icon-wrap" style="color: var(--accent-orange);">
+          <i data-lucide="smartphone"></i>
+        </div>
+        <h3>Mobile & Notifications</h3>
+        <p>Stay informed from the field with our Flutter-based mobile app and FCM integration.</p>
       </article>
+
       <article class="pro-card">
-        <h3>Digital Twin Engine</h3>
-        <p>FastAPI backend + React/Three.js 3D layer for gas leak, fire, and evacuation simulations.</p>
+        <div class="card-icon-wrap" style="color: var(--brand);">
+          <i data-lucide="box"></i>
+        </div>
+        <h3>Digital Twin</h3>
+        <p>Simulate your facility in 3D and visualize risk zones using the Three.js engine.</p>
       </article>
     </section>
 
     <section class="strip reveal">
-      <p>Data flow: ESP32 -> MQTT Broker -> Worker -> MongoDB + Redis -> WebSocket Gateway -> Dashboard/Mobile.</p>
-      <a class="btn btn-ghost" href="videolar-en.html">Open Videos</a>
+      <p>Data flow: ESP32 → MQTT → Worker → MongoDB/Redis → WebSocket → Dashboard.</p>
+      <a class="card-link" href="videolar-en.html">Watch Live Stream</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>AirSense Pro - Platform</p>
+      <p style="margin:0; font-size: 0.9rem; color: var(--muted);">© 2026 AirSense Pro.</p>
       <div>
         <a href="urunler-en.html">Products</a>
         <a href="videolar-en.html">Videos</a>
@@ -80,5 +102,10 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script>
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
 </body>
 </html>

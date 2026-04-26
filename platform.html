@@ -7,11 +7,14 @@
   <meta name="description" content="AirSense platform mimarisi: backend, dashboard, ML ve mobil katmanlar." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
@@ -28,7 +31,7 @@
           <a href="platform.html" class="active">TR</a>
           <a href="platform-en.html">EN</a>
         </div>
-        <a class="btn btn-small" href="iletisim.html">Demo Talebi</a>
+        <a class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 100px;" href="iletisim.html">Demo Talebi</a>
       </div>
     </div>
   </header>
@@ -36,42 +39,61 @@
   <main class="page-shell">
     <section class="page-hero reveal">
       <p class="eyebrow">Platform Mimarisi</p>
-      <h1>Uctan uca gozlemlenebilir, guvenilir ve olceklendirilebilir</h1>
-      <p class="lead">AirSense mimarisi; MQTT veri akisindan Redis Pub/Sub ve WebSocket yayina, oradan panel ve mobile kadar tek hat uzerinden calisir.</p>
+      <h1>Uctan uca gozlemlenebilir ve guvenilir</h1>
+      <p class="lead">AirSense mimarisi; MQTT veri akisindan Redis Pub/Sub ve WebSocket yayina kadar uctan uca optimize edilmistir.</p>
     </section>
 
-    <section class="cards-grid reveal">
+    <section class="cards-grid reveal-stagger">
       <article class="pro-card">
+        <div class="card-icon-wrap" style="color: var(--accent-blue);">
+          <i data-lucide="server"></i>
+        </div>
         <h3>Backend Servisleri</h3>
-        <p>FastAPI + MongoDB (motor) + JWT + MQTT worker + Redis onbellek/pubsub ile gercek zamanli veri isleme.</p>
+        <p>FastAPI, MongoDB ve Redis ile milisaniye bazli veri isleme ve yuksek erisilebilirlik.</p>
       </article>
+
       <article class="pro-card">
+        <div class="card-icon-wrap" style="color: var(--accent-purple);">
+          <i data-lucide="layout"></i>
+        </div>
         <h3>Dashboard Katmani</h3>
-        <p>React 19 + TypeScript + Vite + Tailwind + Recharts ile canli panel, alarm gecmisi ve raporlama.</p>
+        <p>React 19 ve TypeScript yiginiyla uretilen ultra hizli ve proaktif operasyon paneli.</p>
       </article>
+
       <article class="pro-card">
+        <div class="card-icon-wrap" style="color: var(--accent-teal);">
+          <i data-lucide="brain-circuit"></i>
+        </div>
         <h3>ML Motoru</h3>
-        <p>Scikit-learn Isolation Forest ile anomali tespiti; NumPy/Pandas veri isleme ve model yonetimi.</p>
+        <p>Isolation Forest algoritmasi ile uretim tesislerindeki kucuk sapmalari bile onceden yakalayin.</p>
       </article>
+
       <article class="pro-card">
+        <div class="card-icon-wrap" style="color: var(--accent-orange);">
+          <i data-lucide="smartphone"></i>
+        </div>
         <h3>Mobil ve Bildirim</h3>
-        <p>Flutter + Provider + Dio + FCM ile push bildirim, canli veri ve saha odakli mudahale akislar.</p>
+        <p>Flutter tabanli mobil uygulama ve FCM entegrasyonu ile sahadan anlik haber alin.</p>
       </article>
+
       <article class="pro-card">
-        <h3>Dijital Ikiz Motoru</h3>
-        <p>FastAPI backend + React/Three.js 3D gorunum, gaz sizintisi ve tahliye simulasyonlari.</p>
+        <div class="card-icon-wrap" style="color: var(--brand);">
+          <i data-lucide="box"></i>
+        </div>
+        <h3>Dijital Ikiz</h3>
+        <p>Three.js motoruyla tesisinizi 3D olarak simule edin ve riskli bolgeleri gorsellestirin.</p>
       </article>
     </section>
 
     <section class="strip reveal">
-      <p>Veri akisi: ESP32 -> MQTT Broker -> Worker -> MongoDB + Redis -> WebSocket Gecidi -> Panel/Mobil.</p>
-      <a class="btn btn-ghost" href="videolar.html">Videolari Ac</a>
+      <p>Veri akisi: ESP32 → MQTT → Worker → MongoDB/Redis → WebSocket → Dashboard.</p>
+      <a class="card-link" href="videolar.html">Canli Akisi Izle</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>AirSense Pro - Platform</p>
+      <p style="margin:0; font-size: 0.9rem; color: var(--muted);">© 2026 AirSense Pro.</p>
       <div>
         <a href="urunler.html">Urunler</a>
         <a href="videolar.html">Videolar</a>
@@ -80,5 +102,10 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script>
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
 </body>
 </html>

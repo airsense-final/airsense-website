@@ -7,29 +7,31 @@
   <meta name="description" content="AirSense Pro demo talebi ve kurumsal iletişim sayfası." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="glow glow-a" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
       <button class="menu-toggle" type="button" id="menuToggle" aria-label="Menüyü aç">Menu</button>
       <nav class="main-nav" id="mainNav">
         <a href="index.html">Anasayfa</a>
-        <a href="urunler.html">Ürünler</a>
+        <a href="urunler.html">Urunler</a>
         <a href="platform.html">Platform</a>
         <a href="videolar.html">Videolar</a>
-        <a href="iletisim.html" class="active">İletisim</a>
+        <a href="iletisim.html" class="active">Iletisim</a>
       </nav>
       <div class="header-actions">
         <div class="lang-switch" aria-label="Dil secimi">
           <a href="iletisim.html" class="active">TR</a>
           <a href="iletisim-en.html">EN</a>
         </div>
-        <a class="btn btn-small" href="iletisim.html">Demo Talebi</a>
+        <a class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 100px;" href="iletisim.html">Demo Talebi</a>
       </div>
     </div>
   </header>
@@ -38,43 +40,51 @@
     <section class="page-hero reveal">
       <p class="eyebrow">İletişim ve Demo</p>
       <h1>Projenizi birlikte planlayalım</h1>
-      <p class="lead">Pilot kurulum, dijital ikiz, veri tahminlemesi, alarm ve PDF raporlama kapsamını birlikte netleştirelim.</p>
+      <p class="lead">Pilot kurulum, 3D simülasyon ve alarm akislarini birlikte netleştirelim.</p>
     </section>
 
     <section class="contact-block reveal">
-      <div class="contact-info">
+      <div class="contact-info reveal-stagger">
         <div class="info-card">
-          <i data-lucide="mail"></i>
+          <div class="card-icon-wrap" style="width: 44px; height: 44px; margin-bottom: 0;">
+            <i data-lucide="mail" style="width: 20px;"></i>
+          </div>
           <div>
             <h4>E-posta</h4>
             <p>airsense.notification@gmail.com</p>
           </div>
         </div>
         <div class="info-card">
-          <i data-lucide="phone"></i>
+          <div class="card-icon-wrap" style="width: 44px; height: 44px; margin-bottom: 0; color: var(--accent-orange);">
+            <i data-lucide="phone" style="width: 20px;"></i>
+          </div>
           <div>
             <h4>Telefon</h4>
             <p>+90 545 355 3617</p>
           </div>
         </div>
         <div class="info-card">
-          <i data-lucide="map-pin"></i>
+          <div class="card-icon-wrap" style="width: 44px; height: 44px; margin-bottom: 0; color: var(--accent-teal);">
+            <i data-lucide="map-pin" style="width: 20px;"></i>
+          </div>
           <div>
             <h4>Adres</h4>
             <p>Yaşar Üniversitesi, İzmir, Türkiye</p>
           </div>
         </div>
         <div class="info-card">
-          <i data-lucide="file-text"></i>
+          <div class="card-icon-wrap" style="width: 44px; height: 44px; margin-bottom: 0; color: var(--accent-blue);">
+            <i data-lucide="file-text" style="width: 20px;"></i>
+          </div>
           <div>
-            <h4>API Dokümantasyon</h4>
-            <p>/docs ve /redoc</p>
+            <h4>Dokümantasyon</h4>
+            <p>API Reference: /docs</p>
           </div>
         </div>
       </div>
 
-      <div class="contact-form-container pro-card">
-        <h3>Demo ve Bilgi Talebi</h3>
+      <div class="contact-form-container">
+        <h3 style="margin-top: 0; margin-bottom: 32px; font-size: 1.8rem;">Demo ve Bilgi Talebi</h3>
         <form class="contact-form">
           <div class="form-group">
             <label for="name">Ad Soyad</label>
@@ -87,16 +97,14 @@
           </div>
 
           <div class="form-group">
-            <label for="company">Şirket</label>
-            <input id="company" type="text" placeholder="Şirket adınız" required />
-          </div>
-
-          <div class="form-group">
             <label for="note">Notunuz</label>
-            <textarea id="note" rows="4" placeholder="Örnek: 2 tesis, 40 sensör noktası, mobil alarm ve PDF raporlama desteği istiyoruz."></textarea>
+            <textarea id="note" rows="4" placeholder="Kısaca ihtiyacınızdan bahsedin..."></textarea>
           </div>
 
-          <button type="submit" class="btn">Toplantı Talebi Gönder</button>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px;">
+            <i data-lucide="send" style="width: 18px;"></i>
+            Talep Gönder
+          </button>
         </form>
       </div>
     </section>
@@ -104,14 +112,19 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>AirSense Pro - İletişim</p>
+      <p style="margin:0; font-size: 0.9rem; color: var(--muted);">© 2026 AirSense Pro.</p>
       <div>
-        <a href="urunler.html">Ürünler</a>
+        <a href="urunler.html">Urunler</a>
         <a href="platform.html">Platform</a>
         <a href="videolar.html">Videolar</a>
       </div>
     </div>
   </footer>
   <script src="script.js"></script>
+  <script>
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
 </body>
 </html>

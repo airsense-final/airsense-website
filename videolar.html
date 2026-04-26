@@ -7,11 +7,14 @@
   <meta name="description" content="AirSense Pro özellik videoları ve kaydırmalı ürün tanıtım galerisi." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
@@ -28,7 +31,7 @@
           <a href="videolar.html" class="active">TR</a>
           <a href="videolar-en.html">EN</a>
         </div>
-        <a class="btn btn-small" href="iletisim.html">Demo Talebi</a>
+        <a class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 100px;" href="iletisim.html">Demo Talebi</a>
       </div>
     </div>
   </header>
@@ -37,55 +40,66 @@
     <section class="page-hero reveal">
       <p class="eyebrow">Video Merkezi</p>
       <h1>Kaydirarak kesfedin: urun videolari ve canli demo kayitlari</h1>
-      <p class="lead">MQTT veri alimi, threshold/ML alarm tetikleme, email bildirim ve dashboard akislarini senaryo bazli izleyin.</p>
+      <p class="lead">MQTT veri alimi, anomali tespiti ve mobil alarm akislarini senaryo bazli izleyin.</p>
     </section>
 
-    <section class="video-section reveal">
+    <section class="video-section reveal" style="padding: 0; background: transparent; border: 0; box-shadow: none; overflow: visible;">
       <div class="video-wrap">
-        <button class="slider-btn" id="prevBtn" aria-label="Onceki videolar">&#10094;</button>
+        <button class="slider-btn" id="prevBtn" aria-label="Onceki videolar" style="background: var(--glass-bg); border: 1px solid var(--glass-border); color: #fff; z-index: 10;">&#10094;</button>
         <div class="video-track" id="videoTrack">
-          <article class="video-card">
-            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80">
+          <article class="video-card card-base" style="min-width: min(500px, 85vw); padding: 0;">
+            <video controls preload="metadata" style="width: 100%; border-bottom: 1px solid var(--glass-border);">
               <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
             </video>
-            <h3>Gercek Zamanli Dashboard</h3>
-            <p>WebSocket ile canli sensor degerleri ve role dayali alarm ekranlarinin kullanim senaryosu.</p>
+            <div style="padding: 24px;">
+              <h3 style="font-size: 1.3rem;">Gercek Zamanli Dashboard</h3>
+              <p style="font-size: 0.95rem; color: var(--muted); margin-top: 8px;">WebSocket ile canli sensor degerleri ve role dayali alarm ekranlari.</p>
+            </div>
           </article>
-          <article class="video-card">
-            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1581093588401-16ecf5a74d66?auto=format&fit=crop&w=1200&q=80">
+          
+          <article class="video-card card-base" style="min-width: min(500px, 85vw); padding: 0;">
+            <video controls preload="metadata" style="width: 100%; border-bottom: 1px solid var(--glass-border);">
               <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/bee.mp4" type="video/mp4" />
             </video>
-            <h3>Anomali Tespit Akisi</h3>
-            <p>Isolation Forest tabanli ML motorunun normal disi paternleri nasil yakaladigi.</p>
+            <div style="padding: 24px;">
+              <h3 style="font-size: 1.3rem;">Anomali Tespit Akisi</h3>
+              <p style="font-size: 0.95rem; color: var(--muted); margin-top: 8px;">Isolation Forest tabanli ML motorunun sapmalari yakalama anlari.</p>
+            </div>
           </article>
-          <article class="video-card">
-            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1581090700227-1e8e5b8d0b1b?auto=format&fit=crop&w=1200&q=80">
+
+          <article class="video-card card-base" style="min-width: min(500px, 85vw); padding: 0;">
+            <video controls preload="metadata" style="width: 100%; border-bottom: 1px solid var(--glass-border);">
               <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4" />
             </video>
-            <h3>Mobil Alarm Yonetimi</h3>
-            <p>Flutter mobil uygulamada FCM ile alarmi alma, okuma ve takip sureci.</p>
+            <div style="padding: 24px;">
+              <h3 style="font-size: 1.3rem;">Mobil Alarm Yonetimi</h3>
+              <p style="font-size: 0.95rem; color: var(--muted); margin-top: 8px;">Flutter mobil uygulamada FCM ile alarm takip ve mudahale sureci.</p>
+            </div>
           </article>
-          <article class="video-card">
-            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1200&q=80">
+
+          <article class="video-card card-base" style="min-width: min(500px, 85vw); padding: 0;">
+            <video controls preload="metadata" style="width: 100%; border-bottom: 1px solid var(--glass-border);">
               <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
             </video>
-            <h3>Dijital Ikiz Analizi</h3>
-            <p>Three.js tabanli dijital ikizde risk bolgeleri ve simulasyon analizlerinin izlenmesi.</p>
+            <div style="padding: 24px;">
+              <h3 style="font-size: 1.3rem;">Dijital Ikiz Analizi</h3>
+              <p style="font-size: 0.95rem; color: var(--muted); margin-top: 8px;">Three.js tabanli 3D gorunur risk bolgeleri ve tahliye simulasyonu.</p>
+            </div>
           </article>
         </div>
-        <button class="slider-btn" id="nextBtn" aria-label="Sonraki videolar">&#10095;</button>
+        <button class="slider-btn" id="nextBtn" aria-label="Sonraki videolar" style="background: var(--glass-bg); border: 1px solid var(--glass-border); color: #fff; z-index: 10;">&#10095;</button>
       </div>
     </section>
 
     <section class="strip reveal">
-      <p>Bir sonraki adim: pilot kurulum, SMTP email ayari ve PDF export rapor akisinin devreye alinmasi.</p>
-      <a class="btn btn-ghost" href="iletisim.html">Iletisime Gec</a>
+      <p>Bir sonraki adim: pilot kurulum, SMTP e-posta ayari ve PDF export raporlari.</p>
+      <a class="card-link" href="iletisim.html">Toplanti Planla</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>AirSense Pro - Video Merkezi</p>
+      <p style="margin:0; font-size: 0.9rem; color: var(--muted);">© 2026 AirSense Pro.</p>
       <div>
         <a href="urunler.html">Urunler</a>
         <a href="platform.html">Platform</a>
@@ -94,5 +108,10 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script>
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
 </body>
 </html>

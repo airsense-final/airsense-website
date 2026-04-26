@@ -1,4 +1,5 @@
-const revealElements = document.querySelectorAll('.reveal');
+// Scroll-triggered reveals
+const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
 
 if (revealElements.length > 0) {
   const revealObserver = new IntersectionObserver(
@@ -6,27 +7,35 @@ if (revealElements.length > 0) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          // For stagger, we don't disconnect so it can re-animate if needed or just stay visible
         }
       });
     },
-    { threshold: 0.14 }
+    { threshold: 0.15 }
   );
 
   revealElements.forEach((el) => revealObserver.observe(el));
 }
 
+// KPI Counters
 const counters = document.querySelectorAll('[data-counter]');
 let countersStarted = false;
 
 const animateCounter = (el, endValue) => {
   const startValue = 0;
-  const duration = 1200;
+  const duration = 1600; // Slightly longer for "fluid" feel
   const startTime = performance.now();
 
+  const easeOutQuart = (x) => 1 - Math.pow(1 - x, 4);
+
   const update = (currentTime) => {
-    const progress = Math.min((currentTime - startTime) / duration, 1);
-    const value = Math.floor(startValue + (endValue - startValue) * progress);
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easedProgress = easeOutQuart(progress);
+    
+    const value = Math.floor(startValue + (endValue - startValue) * easedProgress);
     el.textContent = value;
+    
     if (progress < 1) {
       requestAnimationFrame(update);
     }
@@ -51,13 +60,24 @@ if (counters.length > 0) {
           }
         });
       },
-      { threshold: 0.45 }
+      { threshold: 0.4 }
     );
 
     counterObserver.observe(counterHost);
   }
 }
 
+// Subtle Parallax Effect for Hero
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  const parallaxEl = document.querySelector('.hero-panel');
+  if (parallaxEl && window.innerWidth > 1024) {
+    const speed = 0.08;
+    parallaxEl.style.transform = `translateY(${scrolled * speed}px)`;
+  }
+});
+
+// Mobile Menu
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
 
@@ -68,6 +88,7 @@ if (menuToggle && mainNav) {
   });
 }
 
+// Video Slider
 const track = document.getElementById('videoTrack');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -89,6 +110,7 @@ if (track && prevBtn && nextBtn) {
   });
 }
 
+// Contact Form
 const form = document.querySelector('.contact-form');
 if (form) {
   form.addEventListener('submit', (event) => {
@@ -106,4 +128,3 @@ if (form) {
 if (typeof lucide !== "undefined") {
   lucide.createIcons();
 }
-
