@@ -7,7 +7,6 @@ if (revealElements.length > 0) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          // For stagger, we don't disconnect so it can re-animate if needed or just stay visible
         }
       });
     },
@@ -23,7 +22,7 @@ let countersStarted = false;
 
 const animateCounter = (el, endValue) => {
   const startValue = 0;
-  const duration = 1600; // Slightly longer for "fluid" feel
+  const duration = 1600;
   const startTime = performance.now();
 
   const easeOutQuart = (x) => 1 - Math.pow(1 - x, 4);
@@ -108,6 +107,36 @@ if (track && prevBtn && nextBtn) {
   nextBtn.addEventListener('click', () => {
     track.scrollBy({ left: getStep(), behavior: 'smooth' });
   });
+}
+
+// Theme Management
+const themeToggle = document.getElementById('themeToggle');
+const currentTheme = localStorage.getItem('theme') || 'dark';
+
+if (currentTheme === 'light') {
+  document.documentElement.setAttribute('data-theme', 'light');
+  updateThemeIcon('light');
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const theme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    updateThemeIcon(theme);
+  });
+}
+
+function updateThemeIcon(theme) {
+  const icon = themeToggle.querySelector('i');
+  if (icon && typeof lucide !== 'undefined') {
+    if (theme === 'light') {
+      icon.setAttribute('data-lucide', 'moon');
+    } else {
+      icon.setAttribute('data-lucide', 'sun');
+    }
+    lucide.createIcons();
+  }
 }
 
 // Contact Form
