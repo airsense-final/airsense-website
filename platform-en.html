@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AirSense Pro | Platform</title>
-  <meta name="description" content="AirSense platform architecture: backend, dashboard, ML, and mobile layers." />
+  <title>Airsense| Platform</title>
+  <meta name="description" content="How AirSense works: an intelligent security line from sensor to notification." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
@@ -17,12 +17,12 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a href="index-en.html" class="brand"><span class="brand-mark"></span>AirSense Pro</a>
-
+      <a href="index-en.html" class="brand"><span class="brand-mark"></span>AirSense</a>
+      
       <nav class="main-nav" id="mainNav">
         <a href="index-en.html">Home</a>
         <a href="urunler-en.html">Products</a>
-        <a href="platform-en.html">Platform</a>
+        <a href="platform-en.html" class="active">Platform</a>
         <a href="videolar-en.html">Videos</a>
         <a href="iletisim-en.html">Contact</a>
       </nav>
@@ -34,71 +34,72 @@
         <button class="theme-toggle" id="themeToggle" aria-label="Change theme">
           <i data-lucide="sun"></i>
         </button>
-        <a class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 100px;" href="iletisim-en.html">Request Demo</a>
+        <a class="btn btn-primary header-btn" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 100px;" href="iletisim-en.html">Request Demo</a>
       </div>
     </div>
   </header>
 
   <main class="page-shell">
     <section class="page-hero reveal">
-      <p class="eyebrow">Platform Architecture</p>
-      <h1>End-to-end observable and reliable</h1>
-      <p class="lead">AirSense architecture is optimized from MQTT ingestion to Redis Pub/Sub and WebSocket streaming.</p>
+      <p class="eyebrow">How It Works</p>
+      <h1>A seamless security line from sensor to mobile</h1>
+      <p class="lead">Airsensemonitors your facility's air, analyzes it, and alerts you within seconds if any risk is detected.</p>
     </section>
 
     <section class="cards-grid reveal-stagger">
       <article class="pro-card">
         <div class="card-icon-wrap" style="color: var(--accent-blue);">
-          <i data-lucide="server"></i>
+          <i data-lucide="waves"></i>
         </div>
-        <h3>Backend Services</h3>
-        <p>Millisecond-based data processing with FastAPI, MongoDB, and Redis for high availability.</p>
-      </article>
-
-      <article class="pro-card">
-        <div class="card-icon-wrap" style="color: var(--accent-purple);">
-          <i data-lucide="layout"></i>
-        </div>
-        <h3>Dashboard Layer</h3>
-        <p>Built with React 19 and TypeScript for an ultra-fast, proactive operational experience.</p>
+        <h3>Data Collection</h3>
+        <p>Our precise sensors monitor gas levels, temperature, and air quality 24/7 without interruption.</p>
       </article>
 
       <article class="pro-card">
         <div class="card-icon-wrap" style="color: var(--accent-teal);">
           <i data-lucide="brain-circuit"></i>
         </div>
-        <h3>ML Engine</h3>
-        <p>Capture even minute deviations in production lines using the Isolation Forest algorithm.</p>
+        <h3>Smart Analysis</h3>
+        <p>Collected data is processed instantly. Our AI recognizes abnormal patterns, such as leaks or deviations, immediately.</p>
       </article>
 
       <article class="pro-card">
         <div class="card-icon-wrap" style="color: var(--accent-orange);">
-          <i data-lucide="smartphone"></i>
+          <i data-lucide="bell-ring"></i>
         </div>
-        <h3>Mobile & Notifications</h3>
-        <p>Stay informed from the field with our Flutter-based mobile app and FCM integration.</p>
+        <h3>Instant Alert System</h3>
+        <p>When a risk is flagged, the system automatically sends emails and push notifications to your mobile phone.</p>
+      </article>
+
+      <article class="pro-card">
+        <div class="card-icon-wrap" style="color: var(--accent-purple);">
+          <i data-lucide="layout-dashboard"></i>
+        </div>
+        <h3>Live Monitoring Panel</h3>
+        <p>Track your facility's status from any device with clear, real-time dashboards and visual charts.</p>
       </article>
 
       <article class="pro-card">
         <div class="card-icon-wrap" style="color: var(--brand);">
           <i data-lucide="box"></i>
         </div>
-        <h3>Digital Twin</h3>
-        <p>Simulate your facility in 3D and visualize risk zones using the Three.js engine.</p>
+        <h3>3D Modeling</h3>
+        <p>Visualize risk zones and air flow through a digital 3D copy of your entire facility.</p>
       </article>
     </section>
 
     <section class="strip reveal">
-      <p>Data flow: ESP32 → MQTT → Worker → MongoDB/Redis → WebSocket → Dashboard.</p>
-      <a class="card-link" href="videolar-en.html">Watch Live Stream</a>
+      <p>Workflow Summary: Detect → Analyze → Notify → Take Action.</p>
+      <a class="card-link" href="videolar-en.html">Watch Live Demo</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p style="margin:0; font-size: 0.9rem; color: var(--muted);">© 2026 AirSense Pro.</p>
+      <p style="margin:0; font-size: 0.9rem; color: var(--muted);">© 2026 AirSense. All rights reserved.</p>
       <div>
         <a href="urunler-en.html">Products</a>
+        <a href="platform-en.html">Platform</a>
         <a href="videolar-en.html">Videos</a>
         <a href="iletisim-en.html">Contact</a>
       </div>
