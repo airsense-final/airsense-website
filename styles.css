@@ -153,9 +153,54 @@ h1, h2, h3 { font-family: "Outfit", sans-serif; color: var(--ink); font-weight: 
 .theme-toggle:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-1px); }
 [data-theme="light"] .theme-toggle { background: #fff; }
 
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--ink);
+  width: 36px; height: 38px; border-radius: 50%;
+  cursor: pointer; align-items: center; justify-content: center;
+  transition: all 0.3s ease;
+}
+.menu-toggle:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-1px); }
+[data-theme="light"] .menu-toggle { background: #fff; }
+
 /* Responsive adjustments for header */
 @media (max-width: 1100px) {
-  .main-nav { display: none; } /* Hide center nav on medium screens to keep actions visible */
+  .menu-toggle { display: flex; }
+  
+  /* Dropdown Menu */
+  .main-nav { 
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    background: var(--header-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px) saturate(180%);
+    flex-direction: column;
+    gap: 8px;
+    
+    /* Hidden state */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  
+  /* Visible state via JS */
+  .main-nav.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .main-nav a { text-align: center; padding: 12px; font-size: 1rem; }
 }
 
 @media (max-width: 600px) {
@@ -232,3 +277,37 @@ h1, h2, h3 { font-family: "Outfit", sans-serif; color: var(--ink); font-weight: 
 .footer-inner { width: 100%; display: flex; justify-content: space-between; align-items: center; }
 .footer-inner a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 24px; }
 .footer-inner a:hover { color: var(--ink); }
+
+/* --- Mobile Responsive Layout (AIR-296) --- */
+@media (max-width: 900px) {
+  .hero-split { grid-template-columns: 1fr; gap: 32px; }
+  .contact-block { grid-template-columns: 1fr; }
+  .strip { flex-direction: column; gap: 20px; text-align: center; padding: 24px; }
+  
+  .footer-inner { flex-direction: column; gap: 16px; justify-content: center; }
+  .footer-inner div { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 12px; }
+  .footer-inner a { margin-left: 0; }
+
+  .hero h1 { font-size: clamp(2rem, 8vw, 2.5rem); }
+  .lead { font-size: 1.05rem; }
+  
+  /* Make buttons full width on smaller screens */
+  .button-row { display: flex; flex-direction: column; gap: 12px; }
+  .button-row .btn { width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .page-shell { margin: 30px auto 60px; gap: 40px; }
+  
+  /* Reduce padding on mobile to save screen space */
+  .card-base, .hero, .page-hero, .route-card, .product-card, .pro-card, .hero-panel, .video-section, .contact-block {
+    padding: 24px;
+  }
+  
+  .kpi-list li { padding: 16px; }
+  .kpi-list strong { font-size: 1.8rem; }
+  
+  /* Adjust header logo size */
+  .brand-icon { width: 38px; height: 38px; }
+  .brand-wordmark { display: none; /* Hide text logo on tiny screens to prevent header wrap */ }
+}
